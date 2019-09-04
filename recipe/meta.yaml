@@ -1,5 +1,5 @@
 {% set name = "mnelab" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c0dd87cdf3541ebb19fe70b1d244b314ddaf48e640f8a2900d4fe89b574822d4
+  sha256: 6083b3fece3761b563e4748960ec9e36ec60fb247c89ff53efdeb3fdfc4789ad
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - matplotlib >=2.0.0
     - mne >=0.17.1
     - numpy >=1.8.1
+    - pybv
     - pyedflib
     - pyqt >=5.6.0
     - python-picard
