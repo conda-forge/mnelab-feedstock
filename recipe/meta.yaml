@@ -25,6 +25,7 @@ requirements:
     - matplotlib >=2.0.0
     - mne >=0.17.1
     - numpy >=1.8.1
+    - pybv
     - pyedflib
     - pyqt >=5.6.0
     - python-picard
