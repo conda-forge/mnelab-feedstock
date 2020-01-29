@@ -15,13 +15,14 @@ build:
   entry_points:
     - mnelab = mnelab.__main__:main
   osx_is_app: True
+  skip: True # [py<36]
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - python.app           # [osx]
     - matplotlib >=2.0.0
     - mne >=0.17.1
