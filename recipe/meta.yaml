@@ -10,8 +10,7 @@ source:
   sha256: ecc7031aa6470fd46dfb645b6c048e37a9f29adae34148fa7deceaefd3f271d6
 
 build:
-  noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - mnelab = mnelab.__main__:main
@@ -23,6 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - python.app           # [osx]
     - matplotlib >=2.0.0
     - mne >=0.17.1
     - numpy >=1.8.1
