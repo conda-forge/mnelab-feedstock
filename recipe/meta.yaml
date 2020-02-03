@@ -1,5 +1,5 @@
 {% set name = "mnelab" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ecc7031aa6470fd46dfb645b6c048e37a9f29adae34148fa7deceaefd3f271d6
+  sha256: 39bc8a38f7a71fa70661ba19c61774fff3bf0d2bc5d74349c1b711f4531fbdfa
 
 build:
-  number: 3
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - mnelab = mnelab.__main__:main
@@ -23,18 +23,19 @@ requirements:
     - pip
   run:
     - python
-    - python.app              # [osx]
-    - pyobjc-framework-cocoa  # [osx]
+    - python.app                      # [osx]
+    - pyobjc-framework-cocoa >=5.2.0  # [osx]
     - matplotlib >=2.0.0
-    - mne >=0.17.1
-    - numpy >=1.8.1
+    - mne >=0.19.0
+    - numpy >=1.14.0
+    - pebble >=4.5.0
     - pybv
     - pyedflib
-    - pyqt >=5.6.0
+    - pyqt >=5.10.0
     - python-picard
     - pyxdf
     - scikit-learn
-    - scipy >=0.17.1
+    - scipy >=1.0.0
 
 test:
   imports:
