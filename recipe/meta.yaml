@@ -10,7 +10,7 @@ source:
   sha256: 39bc8a38f7a71fa70661ba19c61774fff3bf0d2bc5d74349c1b711f4531fbdfa
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - mnelab = mnelab.__main__:main
@@ -25,7 +25,7 @@ requirements:
     - python
     - python.app                      # [osx]
     - pyobjc-framework-cocoa >=5.2.0  # [osx]
-    - matplotlib >=2.0.0
+    - matplotlib-base >=2.0.0
     - mne >=0.19.0
     - numpy >=1.14.0
     - pebble >=4.5.0
