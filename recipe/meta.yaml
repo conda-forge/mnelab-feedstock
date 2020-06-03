@@ -1,5 +1,5 @@
 {% set name = "mnelab" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 39bc8a38f7a71fa70661ba19c61774fff3bf0d2bc5d74349c1b711f4531fbdfa
+  sha256: 1885008ce3ad132feb81e5a0f09bf03cfd86110e1e004f74c5aace596f7a6996
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mnelab = mnelab.__main__:main
-  osx_is_app: True
-  skip: True  # [py<36]
+  osx_is_app: true
+  skip: true  # [py<36]
 
 requirements:
   host:
@@ -25,17 +25,17 @@ requirements:
     - python
     - python.app                      # [osx]
     - pyobjc-framework-cocoa >=5.2.0  # [osx]
-    - matplotlib >=2.0.0
-    - mne >=0.19.0
+    - matplotlib-base >=2.1
+    - mne >=0.20
     - numpy >=1.14.0
     - pebble >=4.5.0
     - pybv
     - pyedflib
-    - pyqt >=5.10.0
     - python-picard
     - pyxdf
     - scikit-learn
     - scipy >=1.0.0
+    - qtpy >=1.9.0
 
 test:
   imports:
@@ -47,7 +47,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Graphical user interface (GUI) for MNE, a Python-based toolbox for EEG/MEG analysis.'
+  summary: Graphical user interface (GUI) for MNE, a Python-based toolbox for EEG/MEG analysis.
 
 extra:
   recipe-maintainers:
