@@ -29,7 +29,6 @@ requirements:
     - mne >=0.21                      # [py <39]
     - mne >=0.22                      # [py >=39]
     - numpy >=1.14.0
-    - pebble >=4.5.0
     - pybv
     - pyedflib
     - python-picard
