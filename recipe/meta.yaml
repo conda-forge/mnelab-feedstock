@@ -10,7 +10,7 @@ source:
   sha256: 4f0b75ea9082e97119e8caefbbda0f9e0459d60d18c10ef5b3c19daf748d18dc
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mnelab = mnelab.__main__:main
