@@ -1,5 +1,5 @@
 {% set name = "mnelab" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f0b75ea9082e97119e8caefbbda0f9e0459d60d18c10ef5b3c19daf748d18dc
+  sha256: 6c77af829f6ad1fc59189ac9e03b052d9e8a7e8ac8a3c485dbf224618449cbc9
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mnelab = mnelab.__main__:main
