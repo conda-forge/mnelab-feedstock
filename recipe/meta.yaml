@@ -10,7 +10,7 @@ source:
   sha256: 6c77af829f6ad1fc59189ac9e03b052d9e8a7e8ac8a3c485dbf224618449cbc9
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mnelab = mnelab.__main__:main
@@ -23,8 +23,8 @@ requirements:
     - pip
   run:
     - python
-    - python.app                      # [osx]
-    - pyobjc-framework-cocoa >=5.2.0  # [osx]
+    - python.app                    # [osx]
+    - pyobjc-framework-cocoa >=7.1  # [osx]
     - matplotlib-base >=2.1
     - mne >=0.21
     - numpy >=1.14.0
