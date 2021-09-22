@@ -22,11 +22,11 @@ requirements:
     - python
     - pip
   run:
+    - mne-base >=0.21
     - python
     - python.app                    # [osx]
     - pyobjc-framework-cocoa >=7.1  # [osx]
     - matplotlib-base >=2.1
-    - mne >=0.21
     - numpy >=1.14.0
     - pybv
     - pyedflib
