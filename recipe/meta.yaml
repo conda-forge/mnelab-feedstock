@@ -22,18 +22,19 @@ requirements:
     - python
     - pip
   run:
-    - mne-base >=0.21
     - python
     - python.app                    # [osx]
     - pyobjc-framework-cocoa >=7.1  # [osx]
+    - mne-base >=0.22.0
     - matplotlib-base >=2.1
     - numpy >=1.14.0
-    - pybv
-    - pyedflib
-    - python-picard
-    - pyxdf
-    - scikit-learn
+    - pybv >=0.4.0
+    - pyedflib >=0.1.15
+    - python-picard >=0.4.0
+    - pyxdf >=1.16.0
+    - scikit-learn >=0.20.0
     - scipy >=1.0.0
+    - pyqt >=5.10.0
     - qtpy >=1.9.0
 
 test:
