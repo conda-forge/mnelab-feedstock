@@ -15,7 +15,7 @@ build:
   entry_points:
     - mnelab = mnelab.__main__:main
   osx_is_app: true
-  skip: true  # [py<36]
+  skip: true  # [py<38]
 
 requirements:
   host:
