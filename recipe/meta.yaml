@@ -1,5 +1,5 @@
 {% set name = "mnelab" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f9b829c2e50c2b4f9f5ebc5058a04d3be3f35012db0cc5a0bb88aada55035fc6
+  sha256: 0995adb56e5c7311a242af36c7709dfbb5ea9c4436c13de4d454347922bc194a
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
   entry_points:
     - mnelab = mnelab.__main__:main
   osx_is_app: true
-  skip: true  # [py<36]
+  skip: true  # [py<38]
 
 requirements:
   host:
