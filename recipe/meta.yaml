@@ -30,8 +30,7 @@ requirements:
     - numpy >=1.20.0
     - scipy >=1.7.0
     - pyxdf >=1.16.0
-    - pyside6 >=6.4.1   # try to work around a build problem on Windows
-    - qt6-main >=6.4.1  # try to work around a build problem on Windows
+    - pyside6 >=6.2.0
     - scikit-learn >=1.0.0
     - python-picard >=0.7.0
     - pyedflib >=0.1.22
