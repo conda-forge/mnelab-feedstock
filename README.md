@@ -1,11 +1,11 @@
-About mnelab
-============
+About mnelab-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mnelab-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/cbrnr/mnelab
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mnelab-feedstock/blob/main/LICENSE.txt)
 
 Summary: Graphical user interface (GUI) for MNE, a Python-based toolbox for EEG/MEG analysis.
 
