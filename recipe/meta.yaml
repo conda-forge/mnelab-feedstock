@@ -19,13 +19,13 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python >=3.9                                # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.9
     - pip
   run:
-    - python
+    - python >=3.9
     - python.app                    # [osx]
     - pyobjc-framework-cocoa >=7.3.0  # [osx]
     - mne-base >=1.0.0
