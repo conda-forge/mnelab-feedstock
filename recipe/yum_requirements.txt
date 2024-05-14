@@ -1,1 +1,10 @@
 mesa-libGL
+mesa-dri-drivers
+libegl1
+libselinux
+libXdamage
+libXxf86vm
+libXext
+libglvnd
+libglvnd-opengl
+libglvnd-egl
