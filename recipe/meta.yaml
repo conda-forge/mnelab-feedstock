@@ -32,6 +32,7 @@ requirements:
     - edfio >=0.4.2
     - matplotlib-base >=3.8.0
     - mne-base >=1.7.0
+    - mne-qt-browser >=0.6.2
     - numpy >=2.0.0
     - scipy >=1.14.1
     - pyxdf >=1.16.4
