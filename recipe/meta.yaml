@@ -1,5 +1,6 @@
 {% set name = "mnelab" %}
 {% set version = "1.0.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +17,6 @@ build:
     - mnelab = mnelab.__main__:main
   noarch: python
   osx_is_app: true
-  skip: true  # [py<310]
 
 requirements:
   build:
