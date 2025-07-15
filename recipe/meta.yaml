@@ -24,7 +24,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - hatchling
+    - uv-build
   run:
     - python >={{ python_min }}
     - python.app                      # [osx]
