@@ -29,6 +29,7 @@ requirements:
     - python >={{ python_min }}
     - python.app                      # [osx]
     - pyobjc-framework-cocoa >=10.0   # [osx]
+    - black >=25.11.0
     - edfio >=0.4.10
     - matplotlib-base >=3.8.0
     - mne-base >=1.10.2
