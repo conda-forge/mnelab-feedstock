@@ -31,6 +31,7 @@ requirements:
     - pyobjc-framework-cocoa >=10.0   # [osx]
     - black >=25.11.0
     - edfio >=0.4.10
+    - isort >=7.0.0
     - matplotlib-base >=3.8.0
     - mne-base >=1.10.2
     - mne-qt-browser >=0.6.2
