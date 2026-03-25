@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  name: mnelab
+  name: "mnelab"
   version: "1.4.2"
   python_min: "3.12"
 
@@ -10,13 +10,14 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: da21a2a72bbbe5e712fa3cc722d8fd61e4d1cd35a949a3c80878d0fe8b656136
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - mnelab = mnelab.__main__:main
@@ -59,8 +60,7 @@ tests:
       imports:
         - mnelab
         - mnelab.utils
-      python_version:
-        - ${{ python_min }}.*
+      python_version: ${{ python_min }}.*
       pip_check: true
 
   - script:
