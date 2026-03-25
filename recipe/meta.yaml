@@ -16,7 +16,6 @@ build:
     - mnelab = mnelab.__main__:main
   noarch: python
   osx_is_app: true
-  skip: True  # [py<312]
 
 requirements:
   build:
