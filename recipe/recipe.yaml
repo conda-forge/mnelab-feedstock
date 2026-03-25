@@ -1,37 +1,43 @@
-{% set name = "mnelab" %}
-{% set version = "1.4.2" %}
+schema_version: 1
+
+context:
+  name: mnelab
+  version: "1.4.2"
+  python_min: "3.12"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name | lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: da21a2a72bbbe5e712fa3cc722d8fd61e4d1cd35a949a3c80878d0fe8b656136
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
-  entry_points:
-    - mnelab = mnelab.__main__:main
   noarch: python
-  osx_is_app: true
-
-context:
-  python_min: "3.12"
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - mnelab = mnelab.__main__:main
+    use_python_app_entrypoint: true
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
   host:
     - python ${{ python_min }}.*
     - pip
     - uv-build
   run:
     - python >=${{ python_min }}
-    - python.app                      # [osx]
-    - pyobjc-framework-cocoa >=10.0   # [osx]
+    - if: osx
+      then:
+        - python.app
+        - pyobjc-framework-cocoa >=10.0
     - black >=25.11.0
     - edfio >=0.4.10
     - isort >=7.0.0
@@ -48,23 +54,25 @@ requirements:
     - pybvrf >=0.1.0
     - onnx >=1.20.0
 
-test:
+tests:
   - python:
-      python_version: ${{ python_min }}.*
-  imports:
-    - mnelab
-    - mnelab.utils
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
-    - python -c "import mnelab; assert mnelab.__version__ == '{{ version }}', mnelab.__version__"
+      imports:
+        - mnelab
+        - mnelab.utils
+      python_version:
+        - ${{ python_min }}.*
+      pip_check: true
+
+  - script:
+      - python -c "import mnelab; assert mnelab.__version__ == '${{ version }}', mnelab.__version__"
+    requirements:
+      run:
+        - python ${{ python_min }}.*
 
 about:
-  home: https://github.com/cbrnr/mnelab
+  homepage: https://github.com/cbrnr/mnelab
+  repository: https://github.com/cbrnr/mnelab
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
   summary: Graphical user interface (GUI) for MNE, a Python-based toolbox for EEG/MEG analysis.
 
