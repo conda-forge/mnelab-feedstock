@@ -17,6 +17,9 @@ build:
   noarch: python
   osx_is_app: true
 
+context:
+  python_min: "3.10"
+
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
