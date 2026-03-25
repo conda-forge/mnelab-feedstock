@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: Graphical user interface (GUI) for MNE, a Python-based toolbox for EEG/MEG analysis.
 
+Development: https://github.com/cbrnr/mnelab
+
 Current build status
 ====================
 
