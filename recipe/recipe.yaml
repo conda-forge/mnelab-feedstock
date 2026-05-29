@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: "mnelab"
-  version: "1.5.1"
+  version: "1.5.2"
   python_min: "3.12"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: d483047da9bc334d6bac62d36d560f11748dc51223a8ed238eda001b5b2898a7
+  sha256: 89012355d78567832e965609d7d535aec8e3dea56ff1cb134984073d54957244
 
 build:
   number: 0
